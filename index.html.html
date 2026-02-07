@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Rose Day 🌹</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 20px;
+            text-align: center;
+            width: 320px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            animation: popIn 1s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            color: #e6005c;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .rose {
+            font-size: 55px;
+            animation: float 2s infinite ease-in-out;
+        }
+
+        .sorry {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 22px;
+            background: #e6005c;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background: #cc0052;
+        }
+
+        /* Floating hearts */
+        .heart {
+            position: absolute;
+            bottom: -20px;
+            font-size: 20px;
+            animation: rise 6s linear infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes rise {
+            0% { transform: translateY(0); opacity: 0; }
+            10% { opacity: 0.6; }
+            100% { transform: translateY(-120vh); opacity: 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating hearts -->
+    <div class="heart" style="left:10%">❤️</div>
+    <div class="heart" style="left:30%; animation-delay:1s;">💖</div>
+    <div class="heart" style="left:50%; animation-delay:2s;">💕</div>
+    <div class="heart" style="left:70%; animation-delay:3s;">❤️</div>
+    <div class="heart" style="left:90%; animation-delay:4s;">💗</div>
+
+    <div class="card">
+        <div class="rose">🌹</div>
+        <h1>Happy Rose Day!</h1>
+
+        <p>
+            This is a virtual rose because real ones are expensive 😄<br>
+            But friends like you? Totally priceless 🌹
+        </p>
+
+        <div class="sorry">
+            Sorry for the late wish 🙈<br>
+            I was busy talking to you😅
+        </div>
+
+        <button onclick="alert('🌹 Smile! This rose was worth the wait 🌹')">
+            Click Me
+        </button>
+    </div>
+
+</body>
+</html>
